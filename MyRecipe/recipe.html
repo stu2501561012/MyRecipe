@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyRecipe — Рецепта</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-recipe">
+  <header class="topbar">
+    <div class="container">
+      <div class="brand-left">
+        <a class="brand" href="recipes.html">MyRecipe</a>
+      </div>
+      <nav class="nav-right">
+        <a href="recipes.html">Рецепти</a>
+        <a href="favorites.html">Любими</a>
+        <a id="logoutLink4" href="index.html">Изход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container recipe-detail-root">
+    <article id="recipeDetail" class="recipe-detail"></article>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script>
+    if (!currentUser()) { window.location.href = 'index.html'; }
+    renderRecipeDetailFromQuery();
+    document.getElementById('logoutLink4').addEventListener('click', logoutHandler);
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyRecipe — Добре дошли</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-welcome">
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="recipes.html">MyRecipe</a>
+      <nav class="nav-right"><a href="recipes.html">Към рецептите</a><a href="favorites.html">Любими</a><a id="logoutLink" href="index.html">Изход</a></nav>
+    </div>
+  </header>
+
+  <main class="container welcome-root">
+    <section class="welcome-hero">
+      <div class="hero-text">
+        <h1>Добре дошли в MyRecipe</h1>
+        <p class="lead">„Не се страхувай да експериментираш — най-добрите ястия се раждат от смелост.“</p>
+        <a class="btn" href="recipes.html">Разгледай рецепти</a>
+      </div>
+      <div class="hero-gallery">
+        <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="">
+        <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" alt="">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="">
+      </div>
+    </section>
+
+    <section class="welcome-intro">
+      <h3>Какво ще намерите</h3>
+      <p>30 подробно описани рецепти, снимки и инструкции. Можете да запазвате любимите и да им се връщате винаги.</p>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script>document.getElementById('logoutLink').addEventListener('click', logoutHandler);</script>
+</body>
+</html>

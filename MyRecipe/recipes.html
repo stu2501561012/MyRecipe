@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyRecipe — Рецепти</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-recipes">
+  <header class="topbar">
+    <div class="container">
+      <div class="brand-left">
+        <a class="brand" href="recipes.html">MyRecipe</a>
+        <span class="subtle">елегантни рецепти</span>
+      </div>
+      <nav class="nav-right">
+        <a href="favorites.html">Любими</a>
+        <a id="logoutLink2" href="index.html">Изход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <aside class="sidebar">
+      <h4>Категории</h4>
+      <ul id="categoryList" class="category-list"></ul>
+    </aside>
+
+    <section class="content">
+      <div class="controls">
+        <input id="searchInput" placeholder="Търси по име или съставка..." />
+      </div>
+      <div id="recipesGrid" class="recipes-grid"></div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script>
+    // page init
+    if (!currentUser()) { window.location.href = 'index.html'; }
+    initRecipesPage();
+    document.getElementById('logoutLink2').addEventListener('click', logoutHandler);
+  </script>
+</body>
+</html>

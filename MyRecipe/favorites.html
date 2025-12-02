@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyRecipe — Любими</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-favorites">
+  <header class="topbar">
+    <div class="container">
+      <div class="brand-left">
+        <a class="brand" href="recipes.html">MyRecipe</a>
+      </div>
+      <nav class="nav-right">
+        <a href="recipes.html">Рецепти</a>
+        <a id="logoutLink5" href="index.html">Изход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Любими рецепти</h2>
+    <ul id="favList" class="fav-list"></ul>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script>
+    if (!currentUser()) { window.location.href = 'index.html'; }
+    renderFavoritesPage();
+    document.getElementById('logoutLink5').addEventListener('click', logoutHandler);
+  </script>
+</body>
+</html>
+
+

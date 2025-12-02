@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyRecipe — Вход / Регистрация</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-auth">
+  <main class="auth-layout">
+    <section class="auth-card">
+      <div class="brand-row">
+        <h1 class="brand">MyRecipe</h1>
+        <p class="tag">Изискано. Просто. Вкусно.</p>
+      </div>
+
+      <div class="forms">
+        <div class="form-block">
+          <h3>Регистрация</h3>
+          <input id="regUser" placeholder="Потребителско име" autocomplete="username">
+          <input id="regPass" type="password" placeholder="Парола" autocomplete="new-password">
+          <input id="regPass2" type="password" placeholder="Повтори паролата" autocomplete="new-password">
+          <button id="btnRegister">Регистрация</button>
+        </div>
+
+        <div class="form-block">
+          <h3>Вход</h3>
+          <input id="logUser" placeholder="Потребителско име" autocomplete="username">
+          <input id="logPass" type="password" placeholder="Парола" autocomplete="current-password">
+          <button id="btnLogin">Вход</button>
+        </div>
+      </div>
+
+      <p class="note">След вход ще имате достъп до библиотеката рецепти, снимки и секцията „Любими“.</p>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('btnRegister').addEventListener('click', registerHandler);
+    document.getElementById('btnLogin').addEventListener('click', loginHandler);
+  </script>
+</body>
+</html>
